@@ -1,3 +1,3 @@
 <template>
-    <left-side />
+    <left-side /> <right-side/> 
 </template>
