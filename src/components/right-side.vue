@@ -1,5 +1,5 @@
 <template>
- <div class="right_content">
+  <div class="right_content">
     <div>
       <div class="content">
         <br />
@@ -23,26 +23,25 @@
         <button class="white">Войти</button>
 
         <p class="or">или</p>
-         <button div class="QR">
-        <span class="QR_Button"
-          ><svg width="24" height="24" viewBox="0 0 24 24">
-            <g width="1" fill="none" fill-rule="evenodd">
-              <g id="qr_24__qr_24">
-                <path id="qr_24__Bounds" d="M0 0h24v24H0z"></path>
-                <path
-                  d="M19.5 19H21c.28 0 .5.22.5.5V21a.5.5 0 0 1-.5.5h-1.5a.5.5 0 0 1-.5-.5v-1.5c0-.28.22-.5.5-.5ZM14 19h1.5c.28 0 .5.22.5.5V21a.5.5 0 0 1-.5.5H14a.5.5 0 0 1-.5-.5v-1.5c0-.28.22-.5.5-.5Zm2.75-2.75h1.5c.28 0 .5.22.5.5v1.5a.5.5 0 0 1-.5.5h-1.5a.5.5 0 0 1-.5-.5v-1.5c0-.28.22-.5.5-.5Zm2.75-2.75H21c.28 0 .5.22.5.5v1.5a.5.5 0 0 1-.5.5h-1.5a.5.5 0 0 1-.5-.5V14c0-.28.22-.5.5-.5Zm-5.5 0h1.5c.28 0 .5.22.5.5v1.5a.5.5 0 0 1-.5.5H14a.5.5 0 0 1-.5-.5V14c0-.28.22-.5.5-.5ZM4.5 13h4a2.5 2.5 0 0 1 2.5 2.5v4A2.5 2.5 0 0 1 8.5 22h-4A2.5 2.5 0 0 1 2 19.5v-4A2.5 2.5 0 0 1 4.5 13Zm.25 1.75a1 1 0 0 0-1 1v3.5a1 1 0 0 0 1 1h3.5a1 1 0 0 0 1-1v-3.5a1 1 0 0 0-1-1h-3.5Zm1 1.5h1.5c.28 0 .5.22.5.5v1.5a.5.5 0 0 1-.5.5h-1.5a.5.5 0 0 1-.5-.5v-1.5c0-.28.22-.5.5-.5ZM15.5 2h4A2.5 2.5 0 0 1 22 4.5v4a2.5 2.5 0 0 1-2.5 2.5h-4A2.5 2.5 0 0 1 13 8.5v-4A2.5 2.5 0 0 1 15.5 2Zm.25 1.75a1 1 0 0 0-1 1v3.5a1 1 0 0 0 1 1h3.5a1 1 0 0 0 1-1v-3.5a1 1 0 0 0-1-1h-3.5Zm1 1.5h1.5c.28 0 .5.22.5.5v1.5a.5.5 0 0 1-.5.5h-1.5a.5.5 0 0 1-.5-.5v-1.5c0-.28.22-.5.5-.5ZM4.5 2h4A2.5 2.5 0 0 1 11 4.5v4A2.5 2.5 0 0 1 8.5 11h-4A2.5 2.5 0 0 1 2 8.5v-4A2.5 2.5 0 0 1 4.5 2Zm.25 1.75a1 1 0 0 0-1 1v3.5a1 1 0 0 0 1 1h3.5a1 1 0 0 0 1-1v-3.5a1 1 0 0 0-1-1h-3.5Zm1 1.5h1.5c.28 0 .5.22.5.5v1.5a.5.5 0 0 1-.5.5h-1.5a.5.5 0 0 1-.5-.5v-1.5c0-.28.22-.5.5-.5Z"
-                  id="qr_24__Mask"
-                  fill="currentColor"
-                ></path>
-              </g>
-            </g></svg
-        ></span>
-        QR-код
-      </button> 
+        <button div class="QR">
+          <span class="QR_Button"
+            ><svg width="24" height="24" viewBox="0 0 24 24">
+              <g width="1" fill="none" fill-rule="evenodd">
+                <g id="qr_24__qr_24">
+                  <path id="qr_24__Bounds" d="M0 0h24v24H0z"></path>
+                  <path
+                    d="M19.5 19H21c.28 0 .5.22.5.5V21a.5.5 0 0 1-.5.5h-1.5a.5.5 0 0 1-.5-.5v-1.5c0-.28.22-.5.5-.5ZM14 19h1.5c.28 0 .5.22.5.5V21a.5.5 0 0 1-.5.5H14a.5.5 0 0 1-.5-.5v-1.5c0-.28.22-.5.5-.5Zm2.75-2.75h1.5c.28 0 .5.22.5.5v1.5a.5.5 0 0 1-.5.5h-1.5a.5.5 0 0 1-.5-.5v-1.5c0-.28.22-.5.5-.5Zm2.75-2.75H21c.28 0 .5.22.5.5v1.5a.5.5 0 0 1-.5.5h-1.5a.5.5 0 0 1-.5-.5V14c0-.28.22-.5.5-.5Zm-5.5 0h1.5c.28 0 .5.22.5.5v1.5a.5.5 0 0 1-.5.5H14a.5.5 0 0 1-.5-.5V14c0-.28.22-.5.5-.5ZM4.5 13h4a2.5 2.5 0 0 1 2.5 2.5v4A2.5 2.5 0 0 1 8.5 22h-4A2.5 2.5 0 0 1 2 19.5v-4A2.5 2.5 0 0 1 4.5 13Zm.25 1.75a1 1 0 0 0-1 1v3.5a1 1 0 0 0 1 1h3.5a1 1 0 0 0 1-1v-3.5a1 1 0 0 0-1-1h-3.5Zm1 1.5h1.5c.28 0 .5.22.5.5v1.5a.5.5 0 0 1-.5.5h-1.5a.5.5 0 0 1-.5-.5v-1.5c0-.28.22-.5.5-.5ZM15.5 2h4A2.5 2.5 0 0 1 22 4.5v4a2.5 2.5 0 0 1-2.5 2.5h-4A2.5 2.5 0 0 1 13 8.5v-4A2.5 2.5 0 0 1 15.5 2Zm.25 1.75a1 1 0 0 0-1 1v3.5a1 1 0 0 0 1 1h3.5a1 1 0 0 0 1-1v-3.5a1 1 0 0 0-1-1h-3.5Zm1 1.5h1.5c.28 0 .5.22.5.5v1.5a.5.5 0 0 1-.5.5h-1.5a.5.5 0 0 1-.5-.5v-1.5c0-.28.22-.5.5-.5ZM4.5 2h4A2.5 2.5 0 0 1 11 4.5v4A2.5 2.5 0 0 1 8.5 11h-4A2.5 2.5 0 0 1 2 8.5v-4A2.5 2.5 0 0 1 4.5 2Zm.25 1.75a1 1 0 0 0-1 1v3.5a1 1 0 0 0 1 1h3.5a1 1 0 0 0 1-1v-3.5a1 1 0 0 0-1-1h-3.5Zm1 1.5h1.5c.28 0 .5.22.5.5v1.5a.5.5 0 0 1-.5.5h-1.5a.5.5 0 0 1-.5-.5v-1.5c0-.28.22-.5.5-.5Z"
+                    id="qr_24__Mask"
+                    fill="currentColor"
+                  ></path>
+                </g>
+              </g></svg
+          ></span>
+          QR-код
+        </button>
       </div>
     </div>
     <div class="registration">
-
       <button class="green">Зарегистрироваться</button>
       <div class="JoinForm">
         После регистрации вы получите доступ <br />
@@ -71,12 +70,14 @@ body {
   align-items: center;
   background-color: #333333;
   padding-bottom: 1.5em;
-  padding-top:0.5em;
-   margin-top: 1em;
+  padding-top: 0.5em;
+  margin-top: 1em;
   width: 300px;
   border-radius: 10px;
 }
-.green, .white, .QR {
+.green,
+.white,
+.QR {
   height: 2rem;
   border: none;
   border-radius: 10px;
@@ -84,7 +85,7 @@ body {
   min-width: 250px;
   align-items: center;
   background: #272727;
-justify-content: center;
+  justify-content: center;
 }
 button:hover {
   background: #878f99;
@@ -96,7 +97,7 @@ button:hover {
   justify-content: flex-start;
   flex-basis: length;
   gap: 30%;
-  color:white;
+  color: white;
 }
 .header {
   display: inline-flex;
@@ -142,30 +143,25 @@ button:hover {
 .green {
   background: #52b652;
   margin-top: 15px;
-  color:white;
-  
+  color: white;
 }
 .green:hover {
   background: #6cd97e;
-  
 }
 .white {
   background: white;
   color: #141414;
-  
 }
 .white:hover {
   background: #d7d8db;
 }
 
-.right_content
- {
+.right_content {
   display: flex;
 
   flex-direction: column;
-  gap:1em;
+  gap: 1em;
   align-items: center;
-  
+  margin-top: 10%;
 }
-
 </style>

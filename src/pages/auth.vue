@@ -1,1 +1,3 @@
-<template><left-side /> <right-side /></template>
+<template>
+ <headerr /> <left-side /> <right-side /> <footerr/>
+</template>

@@ -68,5 +68,6 @@ button:hover {
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  margin-top: 10%;
 }
 </style>
