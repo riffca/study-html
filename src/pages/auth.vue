@@ -1,3 +1,1 @@
-<template>
-    <left-side /> <right-side/> 
-</template>
+<template><left-side /> <right-side /></template>
