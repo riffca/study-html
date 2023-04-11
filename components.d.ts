@@ -9,15 +9,18 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    Footerr: typeof import('./src/components/footerr.vue')['default']
-    Header: typeof import('./src/components/header.vue')['default']
-    Headerr: typeof import('./src/components/headerr.vue')['default']
+    copy: typeof import('./src/components/icons/IconRightContent.vue')['default']
+    Footer: typeof import('./src/components/layout/layout-footer.vue')['default']
+    Header: typeof import('./src/components/layout/layout-header.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     IconCommunity: typeof import('./src/components/icons/IconCommunity.vue')['default']
     IconDocumentation: typeof import('./src/components/icons/IconDocumentation.vue')['default']
     IconEcosystem: typeof import('./src/components/icons/IconEcosystem.vue')['default']
+    IconLogo: typeof import('./src/components/icons/IconRightContent.vue')['default']
     IconSupport: typeof import('./src/components/icons/IconSupport.vue')['default']
     IconTooling: typeof import('./src/components/icons/IconTooling.vue')['default']
+    LayoutFooter: typeof import('./src/components/layout/layout-footer.vue')['default']
+    LayoutHeader: typeof import('./src/components/layout/layout-header.vue')['default']
     LeftSide: typeof import('./src/components/left-side.vue')['default']
     RightSide: typeof import('./src/components/right-side.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

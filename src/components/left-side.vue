@@ -14,8 +14,8 @@
         alt=""
       />
     </div>
-    <div>
-      <button>
+    <div class="app_shops">
+      <button class="google_play">
         <svg
           width="16"
           height="16"
@@ -30,10 +30,10 @@
             fill="currentColor"
           ></path>
         </svg>
-        <div>Google play</div>
+        Google play
       </button>
-      <button>RuStore</button>
-      <button>App Store</button>
+      <button class="ru_store">RuStore</button>
+      <button class="app_store">App Store</button>
     </div>
     <div><a href="">All products</a></div>
   </div>
@@ -45,12 +45,19 @@ h1 {
   text-align: center;
 }
 
-button {
+.google_play, .ru_store, .app_store {
   height: 2rem;
   border: none;
-  border-radius: 30px;
+  border-radius: 10px;
+  width: 120px;
+ 
+ 
+
+}
+.app_shops {
   display: flex;
   align-items: center;
+  gap:20px;
 }
 
 svg {
@@ -67,7 +74,9 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  justify-content: flex-start;
+  gap: 10px;
   margin-top: 10%;
 }
+
 </style>

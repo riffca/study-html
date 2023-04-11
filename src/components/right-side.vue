@@ -1,9 +1,7 @@
 <template>
   <div class="right_content">
-    <div>
-      <div class="content">
-        <br />
-        <div class="vk_icon">
+      <div class="right_content_body">
+        <div class="right_content_icon">
           <svg height="48" width="49">
             <path
               clip-rule="evenodd"
@@ -13,19 +11,18 @@
             ></path>
           </svg>
         </div>
-        <div class="VK_header">Вход ВКонтакте</div>
-        <input type="text" class="VKid" placeholder="Телефон или почта" />
+        <div class="vk_header">Вход ВКонтакте</div>
+        <input type="text" class="id" placeholder="Телефон или почта" />
         <div class="entrance">
           <input type="checkbox" />
           Сохранить вход
         </div>
         <br />
-        <button class="white">Войти</button>
+        <button class="enter_button">Войти</button>
 
-        <p class="or">или</p>
-        <button div class="QR">
-          <span class="QR_Button"
-            ><svg width="24" height="24" viewBox="0 0 24 24">
+        <div class="or">или</div>
+        <button div class="qr">
+          <svg width="24" height="24" viewBox="0 0 24 24">
               <g width="1" fill="none" fill-rule="evenodd">
                 <g id="qr_24__qr_24">
                   <path id="qr_24__Bounds" d="M0 0h24v24H0z"></path>
@@ -35,15 +32,14 @@
                     fill="currentColor"
                   ></path>
                 </g>
-              </g></svg
-          ></span>
+              </g>
+            </svg>
           QR-код
         </button>
       </div>
-    </div>
     <div class="registration">
-      <button class="green">Зарегистрироваться</button>
-      <div class="JoinForm">
+      <button class="register_button">Зарегистрироваться</button>
+      <div class="join_form">
         После регистрации вы получите доступ <br />
         ко всем возможностям VK ID <br />
         <a href="https://id.vk.com/promo" target="_blank"> Узнать больше </a>
@@ -53,17 +49,8 @@
 </template>
 
 <style lnag="scss">
-.bnav_a {
-  padding: 2px 5px;
-}
-p,
-h1,
-body {
-  font-weight: 500;
-  text-align: center;
-  font-family: Roboto, sans-serif;
-}
-.content,
+
+.right_content_body,
 .registration {
   display: flex;
   flex-direction: column;
@@ -74,10 +61,11 @@ body {
   margin-top: 1em;
   width: 300px;
   border-radius: 10px;
+  
 }
-.green,
-.white,
-.QR {
+.register_button,
+.enter_button,
+.qr {
   height: 2rem;
   border: none;
   border-radius: 10px;
@@ -91,7 +79,7 @@ button:hover {
   background: #878f99;
   cursor: pointer;
 }
-.QR {
+.qr {
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
@@ -99,12 +87,8 @@ button:hover {
   gap: 30%;
   color: white;
 }
-.header {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.VKid {
+
+.id {
   border: 0;
   -webkit-box-sizing: border-box;
   width: 250px;
@@ -126,8 +110,9 @@ button:hover {
 .or {
   color: gray;
   font-size: 13px;
+  padding: 10px 0 10px 0;
 }
-.VK_header {
+.vk_header {
   font-size: 20px;
   line-height: 24px;
   text-align: center;
@@ -135,33 +120,37 @@ button:hover {
   margin-bottom: 20px;
   font-weight: 550;
 }
-.JoinForm {
+.join_form {
   font-size: 12px;
   margin-top: 8px;
   color: gray;
 }
-.green {
+.register_button {
   background: #52b652;
   margin-top: 15px;
   color: white;
 }
-.green:hover {
+.register_button:hover {
   background: #6cd97e;
 }
-.white {
+.enter_button {
   background: white;
   color: #141414;
 }
-.white:hover {
+.enter_button:hover {
   background: #d7d8db;
 }
-
+.registration {
+  text-align: center;
+}
 .right_content {
   display: flex;
-
   flex-direction: column;
   gap: 1em;
   align-items: center;
   margin-top: 10%;
+}
+.right_content_icon{
+  padding-top: 15px;
 }
 </style>
