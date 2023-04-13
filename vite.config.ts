@@ -13,10 +13,10 @@ export default defineConfig({
   plugins: [vue(), vueJsx(),
       Pages(),
       Components({
-      dts: true,
-
-      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
-    }),
+        extensions: ['vue'],
+        directoryAsNamespace: true,
+        dts: true,
+      }),
   
   
   ],
