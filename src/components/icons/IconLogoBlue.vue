@@ -1,6 +1,5 @@
-<template>
-  <div class="header">
-    <svg width="136" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <template>
+<svg width="136" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#new_logo_vk_with_text__a)">
         <g clip-path="url(#new_logo_vk_with_text__b)">
           <path
@@ -36,26 +35,4 @@
         </clipPath>
       </defs>
     </svg>
-    <input type="text" class="vk_id" placeholder="Поиск" />
-  </div>
-</template>
-<style lnag="scss">
-.header {
-  position: fixed;
-  left: 50px;
-  right: 50px;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-.vk_id{
-  height: 2rem;
-  border: none;
-  border-radius: 10px;
-  display: flex;
-  min-width: 250px;
-  align-items: center;
-  background: #272727;
-  padding-left: 20px;
-}
-</style>
+    </template>

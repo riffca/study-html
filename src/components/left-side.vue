@@ -39,7 +39,7 @@
   </div>
 </template>
 
-<style lnag="scss">
+<style lnag="scss" scoped>
 p,
 h1 {
   text-align: center;

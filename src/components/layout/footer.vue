@@ -8,7 +8,7 @@
     <a href="https://dev.vk.com">Разработчикам</a>
   </div>
 </template>
-<style lnag="scss">
+<style lnag="scss" scoped>
 .links {
   top: 95%;
   position: fixed;

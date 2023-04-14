@@ -1,3 +1,3 @@
 <template>
-  <layout-header/> <left-side /> <right-side /> <layout-footer /> <icons-icon-pencil/>
+  <layout-header/> <left-side /> <right-side /> <layout-footer /> 
 </template>
