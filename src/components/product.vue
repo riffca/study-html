@@ -1,5 +1,14 @@
 <template>
   <div class="body">
+
+
+    <div :class="'product'+(index+1)" v-for="product, index in products"> 
+      <img :src="product.img" imgfield="img" style="max-width: 150px; width: 150px;" alt=""> 
+      <p>{{ product.name }}</p> 
+    </div>
+
+  
+
     <div class="logo">
    <img src="https://static.tildacdn.info/tild6431-3661-4430-b735-353863373435/11.svg" imgfield="img" style="max-width: 150px; width: 150px;" alt=""> 
   </div>
@@ -60,6 +69,37 @@
    </div>
 </div>
 </template>
+
+<script setup lang="ts">
+
+type Product =  {
+  img: string
+  price: number
+  name: string
+}
+
+type Products = Product[]
+
+
+const products: Products = [
+  {
+    img: 'https://static.tildacdn.info/tild6431-3661-4430-b735-353863373435/11.svg',
+    price: 30,
+    name: 'Red nose'
+  },
+  {
+    img: 'https://static.tildacdn.info/tild6431-3661-4430-b735-353863373435/11.svg',
+    price: 30,
+    name: 'Red nose'
+  },
+  {
+    img: 'https://static.tildacdn.info/tild6431-3661-4430-b735-353863373435/11.svg',
+    price: 30,
+    name: 'Red nose'
+  }
+]
+
+</script>
 
 <style lnag="scss">
 .logo{
