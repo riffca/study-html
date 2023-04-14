@@ -5,7 +5,7 @@
          <icons-IconLogoGrey/>
         </div>
         <div class="vk_header">Вход ВКонтакте</div>
-        <input type="text" class="id" placeholder="Телефон или почта" />
+        <input type="text" class="right_content_id" placeholder="Телефон или почта" />
         <div class="entrance">
           <input type="checkbox" />
           Сохранить вход
@@ -13,8 +13,8 @@
         <br />
         <button class="enter_button">Войти</button>
 
-        <div class="or">или</div>
-        <button div class="qr">
+        <div class="right_content_or">или</div>
+        <button div class="right_content_qr">
           <icons-IconQR/>
           QR-код
         </button>
@@ -47,7 +47,7 @@
 }
 .register_button,
 .enter_button,
-.qr {
+.right_content_qr {
   height: 2rem;
   border: none;
   border-radius: 10px;
@@ -61,7 +61,7 @@ button:hover {
   background: #878f99;
   cursor: pointer;
 }
-.qr {
+.right_content_qr {
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
@@ -70,7 +70,7 @@ button:hover {
   color: white;
 }
 
-.id {
+.right_content_id {
   border: 0;
   -webkit-box-sizing: border-box;
   width: 250px;
@@ -89,7 +89,7 @@ button:hover {
   gap: 5px;
   font-size: 13px;
 }
-.or {
+.right_content_or {
   color: gray;
   font-size: 13px;
   padding: 10px 0 10px 0;
