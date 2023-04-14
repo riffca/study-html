@@ -1,3 +1,6 @@
+
+import type { parseStringStyle } from '@vue/shared';
+
 <template>
-    <left-side />
+    <product/>
 </template>

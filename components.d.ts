@@ -10,12 +10,13 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
-    IconCommunity: typeof import('./src/components/icons/IconCommunity.vue')['default']
-    IconDocumentation: typeof import('./src/components/icons/IconDocumentation.vue')['default']
-    IconEcosystem: typeof import('./src/components/icons/IconEcosystem.vue')['default']
-    IconSupport: typeof import('./src/components/icons/IconSupport.vue')['default']
-    IconTooling: typeof import('./src/components/icons/IconTooling.vue')['default']
+    IconsIconCommunity: typeof import('./src/components/icons/IconCommunity.vue')['default']
+    IconsIconDocumentation: typeof import('./src/components/icons/IconDocumentation.vue')['default']
+    IconsIconEcosystem: typeof import('./src/components/icons/IconEcosystem.vue')['default']
+    IconsIconSupport: typeof import('./src/components/icons/IconSupport.vue')['default']
+    IconsIconTooling: typeof import('./src/components/icons/IconTooling.vue')['default']
     LeftSide: typeof import('./src/components/left-side.vue')['default']
+    Product: typeof import('./src/components/product.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TheWelcome: typeof import('./src/components/TheWelcome.vue')['default']
