@@ -1,48 +1,12 @@
 <template>
-  <div class="body">
-
-
-    <div :class="'product'+(index+1)" v-for="product, index in products"> 
-      <img :src="product.img" imgfield="img" style="max-width: 150px; width: 150px;" alt=""> 
-      <p>{{ product.name }}</p> 
-    </div>
-
-  
-
-    <div class="logo">
+  <div class="products_page">
+    <div class="products_page--logo">
    <img src="https://static.tildacdn.info/tild6431-3661-4430-b735-353863373435/11.svg" imgfield="img" style="max-width: 150px; width: 150px;" alt=""> 
   </div>
 <div class="headline">Мы любим создавать особенные и уникальные вещи  <br/>для украшения вашей жизни и дома </div>
-<div class= "content">
-  <div class="product1"> 
- <img src="https://img.freepik.com/free-psd/white-soft-pillow_176382-1113.jpg?w=740&t=st=1681475029~exp=1681475629~hmac=ebf93ad34ab40976c0b135555496335203a0600d85da46ca22c8ed03dc057590" imgfield="img" style="max-width: 150px; width: 150px;" alt=""> 
-<p>Подушка "Trema" 799 р.</p> </div>
-   <div class="product2"> 
- <img src="https://img.freepik.com/premium-photo/ipad-case_744526-100.jpg?w=740" imgfield="img" style="max-width: 150px; width: 150px;" alt="">  
-<p> Обложка для планшета "Carnet" 3999 p.</p> </div>
-  <div class="product3"> 
- <img src="https://img.freepik.com/free-photo/elegant-watch-with-a-silver-and-golden-chain-isolated_181624-27080.jpg?w=740&t=st=1681479403~exp=1681480003~hmac=7970dc4897b0c50baa0cea1a01f8a9e74609fc7ec7baf8f1a021b8844651d825" imgfield="img" style="max-width: 150px; width: 150px;" alt="">  
-<p>Часы "Kruka" 2799 р. </p> </div>
-  <div class="product4"> 
- <img src="https://www.christies.com/img/LotImages/2011/CKS/2011_CKS_08009_0028_000(a_carved_marble_bust_of_the_apollo_belvedere_after_the_antique_italian).jpg" imgfield="img" style="max-width: 150px; width: 150px;" alt=""> 
-  <p> Глиняный бюст 4999 p.</p></div>
-   <div class="product5"> 
- <img src="https://img.freepik.com/free-photo/classic-alarm-clock_74190-5699.jpg?w=1060&t=st=1681480032~exp=1681480632~hmac=d15787415580562630eb0598979fb8b8342ae0dcddc21116f2154781f4201ed3" imgfield="img" style="max-width: 150px; width: 150px;" alt="">  
-<p>Будильник "Alise" 1899 p.</p> </div>
-  <div class="product6"> 
- <img src="https://img.freepik.com/premium-photo/pillows-on-white-background_93675-132548.jpg?w=1060" imgfield="img" style="max-width: 150px; width: 150px;" alt=""> 
-   <p> Подушка "Rabbi" 799 p.</p> </div>
-  <div class="product7"> 
- <img src="https://img.freepik.com/premium-photo/vintage-silver-teapot-on-an-isolated-white_322433-1463.jpg?w=1060" imgfield="img" style="max-width: 150px; width: 150px;" alt="">  
- <p>Кофейный чайник "Stuka" 1799 p.</p> </div>
-  <div class="product8"> 
- <img src="https://img.freepik.com/free-vector/retro-camera-isolated_529539-148.jpg?w=740&t=st=1681481937~exp=1681482537~hmac=5964c1012c669ddf22be511490944f89dcb1cdcd6d7e04a2df38d3b1e2f2b9a3" imgfield="img" style="max-width: 150px; width: 150px;" alt="">  
-  <p>Камера "Leica" 3999 p.</p></div>
-    <div class="product9"> 
- <img src="https://cdn1.ozone.ru/multimedia/1027236017.jpg" imgfield="img" style="max-width: 150px; width: 150px;" alt="">  
-<p> Бюст серебристый 4999 p.</p></div>
-  
-</div> <!-- end content--->
+
+
+
 
 <div class="delivery">
   ИНФОРМАЦИЯ О ДОСТАВКЕ
@@ -70,39 +34,10 @@
 </div>
 </template>
 
-<script setup lang="ts">
-
-type Product =  {
-  img: string
-  price: number
-  name: string
-}
-
-type Products = Product[]
 
 
-const products: Products = [
-  {
-    img: 'https://static.tildacdn.info/tild6431-3661-4430-b735-353863373435/11.svg',
-    price: 30,
-    name: 'Red nose'
-  },
-  {
-    img: 'https://static.tildacdn.info/tild6431-3661-4430-b735-353863373435/11.svg',
-    price: 30,
-    name: 'Red nose'
-  },
-  {
-    img: 'https://static.tildacdn.info/tild6431-3661-4430-b735-353863373435/11.svg',
-    price: 30,
-    name: 'Red nose'
-  }
-]
-
-</script>
-
-<style lnag="scss">
-.logo{
+<style lnag="scss" scoped>
+.products_page--logo{
   text-align:center;
   margin-top:30px;
 }
@@ -155,7 +90,7 @@ margin-right: auto;
   margin-bottom:40px;
   text-align: center;
 }
-.body{
+.products_page{
   display: flex;
   flex-direction: column;
 }
