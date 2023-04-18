@@ -26,7 +26,7 @@
   </div>
 </template>
 
-<style lnag="scss" scoped>
+<style lang="scss" scoped>
 p,
 h1 {
   text-align: center;
@@ -51,12 +51,6 @@ svg {
   display: inline-block;
   transform: transalate(0, 5opx);
 }
-
-button:hover {
-  background: gray;
-  cursor: pointer;
-}
-
 .left_content {
   display: flex;
   flex-direction: column;

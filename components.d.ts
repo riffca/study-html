@@ -9,6 +9,8 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AuthLeftSide: typeof import('./src/components/auth/left-side.vue')['default']
+    AuthRightSide: typeof import('./src/components/auth/right-side.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     IconsIconCommunity: typeof import('./src/components/icons/IconCommunity.vue')['default']
     IconsIconDocumentation: typeof import('./src/components/icons/IconDocumentation.vue')['default']
@@ -21,8 +23,8 @@ declare module '@vue/runtime-core' {
     IconsIconTooling: typeof import('./src/components/icons/IconTooling.vue')['default']
     LayoutFooter: typeof import('./src/components/layout/footer.vue')['default']
     LayoutHeader: typeof import('./src/components/layout/header.vue')['default']
-    LeftSide: typeof import('./src/components/left-side.vue')['default']
-    RightSide: typeof import('./src/components/right-side.vue')['default']
+    LeftSide: typeof import('./src/components/auth/left-side.vue')['default']
+    RightSide: typeof import('./src/components/auth/right-side.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TheWelcome: typeof import('./src/components/TheWelcome.vue')['default']

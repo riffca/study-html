@@ -1,3 +1,3 @@
 <template>
-  <layout-header/> <left-side /> <right-side /> <layout-footer /> 
+  <layout-header/> <auth-left-side /> <auth-right-side /> <layout-footer /> 
 </template>

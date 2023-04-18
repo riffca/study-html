@@ -30,7 +30,7 @@
   </div>
 </template>
 
-<style lnag="scss" scoped>
+<style lang="scss" scoped>
 
 .right_content_body,
 .registration {
@@ -57,10 +57,7 @@
   background: #272727;
   justify-content: center;
 }
-button:hover {
-  background: #878f99;
-  cursor: pointer;
-}
+
 .right_content_qr {
   display: inline-flex;
   align-items: center;
@@ -107,20 +104,20 @@ button:hover {
   margin-top: 8px;
   color: gray;
 }
+
 .register_button {
   background: #52b652;
   margin-top: 15px;
   color: white;
-}
-.register_button:hover {
-  background: #6cd97e;
+  &:hover {
+   background: #6cd97e;
+  }
 }
 .enter_button {
   background: white;
   color: #141414;
-}
-.enter_button:hover {
-  background: #d7d8db;
+  &:hover {background: #d7d8db;
+  }
 }
 .registration {
   text-align: center;
@@ -131,8 +128,9 @@ button:hover {
   gap: 1em;
   align-items: center;
   margin-top: 10%;
-}
-.right_content_icon{
-  padding-top: 15px;
+
+  &_icon {
+    padding-top: 15px;
+  }
 }
 </style>
