@@ -1,4 +1,4 @@
-import type { Product } from '@/stores/product;
+
 <template>
   <div :class="'product' + (index + 1)" v-for="(product, index) in products">
     <img
@@ -10,6 +10,15 @@ import type { Product } from '@/stores/product;
     <p>{{ product.name }}</p>
   </div>
 </template>
+
+<script setup lang ="ts">
+import type { Product } from '@/stores/product';
+const props = defineProps <{
+  products:Product[]
+  }>();
+
+  
+</script>
 
 <style lnag="scss" scoped>
 .product {
