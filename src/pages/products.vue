@@ -14,11 +14,12 @@
       Мы любим создавать особенные и уникальные вещи <br />для украшения вашей
       жизни и дома
     </div>
+    <CartIcon :itemQty="cartQty" />
 
     <products-list :products="products"/>
-    
-    
 
+    <ProductItem :product="products"/>
+    
     <div class="delivery">
       ИНФОРМАЦИЯ О ДОСТАВКЕ
       <div class="delivery_info">
@@ -52,9 +53,17 @@
       </a>
     </div>
   </div>
+
+  
+
 </template>
 
 <script setup lang ="ts">
+
+import { defineComponent } from "vue";
+import ProductList from "@/components/ProductItemvue.js";
+
+
 import type { Product } from '@/stores/product';
 const products: Product[] =[
   {
@@ -103,7 +112,24 @@ const products: Product[] =[
     name: "Silver bust",
   },
 ];
+</script>
 
+<script lang="ts">
+import { defineComponent, ref } from "vue";
+import CartIcon from "@/components/CartIcon.vue";
+  
+export default defineComponent({
+  name: "App",
+  components: {
+    CartIcon
+  },
+  setup() {
+    const cartQty = ref(3);
+    return {
+      cartQty
+    };
+  }
+});
 </script>
 
 <style lang="scss" scoped>
@@ -128,10 +154,11 @@ const products: Product[] =[
   padding: 40px calc((100% - (350px * 2)) / 2);
 }
 .delivery {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   background-color: #f0f0f0;
   text-align: center;
+  color:black;
 }
 .delivery_info {
   margin-top: 50px;
