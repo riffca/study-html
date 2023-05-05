@@ -60,10 +60,6 @@
 
 <script setup lang ="ts">
 
-import { defineComponent } from "vue";
-import ProductList from "@/components/ProductItemvue.js";
-
-
 import type { Product } from '@/stores/product';
 const products: Product[] =[
   {

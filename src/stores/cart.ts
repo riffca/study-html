@@ -1,18 +1,17 @@
 import { ref, computed } from "vue";
 import { defineStore } from "pinia";
+import type {Product} from "@/stores/product";
 
 export const Store = defineStore("cart", () => {
-  const count = ref(0);
-  const doubleCount = computed(() => count.value * 2);
-  function increment() {
-    count.value++;
-  }
-  computed: {
-    totalItems() {
-      return this.cart.reduce((sum, item) => sum + item.quantity, 0);
-    }
-  }
-  return { count, doubleCount, increment };
+ const cartProducts = ref<Product[]>([])
+ function addProduct (productsArray:Product[], index:number) :void {
+  let product=productsArray[index];
+  cartProducts.value.push(product);
+}
+ function deleteProduct (productsArray:Product[], index:number) {
+  cartProducts.value.splice(index,1);
+ }
+ return {cartProducts, addProduct, deleteProduct}
 });
 
 
