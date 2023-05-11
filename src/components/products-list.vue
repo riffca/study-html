@@ -1,26 +1,29 @@
 
 <template>
   <div :class="'product'" v-for="(product, index) in products">
-    <img
-      :src="product.img"
-      imgfield="img"
-      style="max-width: 150px; width: 150px"
-      alt=""
-    />
+    <img :src="product.img" imgfield="img" style="max-width: 150px; width: 150px" alt="" />
     <p>{{ product.name }}</p>
     <div class="product-item">
-    <img src="https://cdn.icon-icons.com/icons2/2785/PNG/512/shopping_cart_add_icon_177407.png" alt="Добавить в корзину" width="30" height="30" @click="addToCart(product)">
-  </div>
+      <img src="https://cdn.icon-icons.com/icons2/2785/PNG/512/shopping_cart_add_icon_177407.png" alt="Добавить в корзину"
+        width="30" height="30" @click="addToCart(product)">
+    </div>
   </div>
 </template>
 
 <script setup lang ="ts">
 import type { Product } from '@/stores/product';
-const props = defineProps <{
-  products:Product[]
-  }>();
+import { useCart } from "@/stores/cart";
 
-  
+const props = defineProps<{
+  products: Product[]
+}>();
+
+const cartStore = useCart();
+function addToCart(product: Product) {
+  cartStore.addProduct(product);
+
+}
+
 </script>
 
 <style lang="scss" scoped>
