@@ -9,9 +9,8 @@
 import type { Product } from '@/stores/product';
 import {useCart} from "@/stores/cart";
 
-const CartHeader = useCart();
-const cartCount = CartHeader.cartProducts.length;
-;
+const CartStore = useCart();
+const cartCount = CartStore.cartProducts.length;
 </script>
 
 <style lang="scss" scoped>
@@ -20,6 +19,7 @@ const cartCount = CartHeader.cartProducts.length;
   align-items: center;
  margin-left: 30em;
   margin-bottom: 30px;
+  margin-top: 50px;
 }
 
 .cart-badge {

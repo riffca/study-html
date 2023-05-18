@@ -1,6 +1,7 @@
 
 
 <template>
+<LayoutHeader/>
   <div class="products_page">
     <div class="products_page--logo">
       <img src="https://static.tildacdn.info/tild6431-3661-4430-b735-353863373435/11.svg" imgfield="img"
@@ -11,6 +12,8 @@
       жизни и дома
     </div>
     <CartIcon :itemQty="cartQty" />
+
+    
 
     <products-list :products="productsWithIds" />
 

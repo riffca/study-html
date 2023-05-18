@@ -4,15 +4,22 @@
     <img :src="product.img" imgfield="img" style="max-width: 150px; width: 150px" alt="" />
     <p>{{ product.name }}</p>
     <div class="product-item">
-      <img src="https://cdn.icon-icons.com/icons2/2785/PNG/512/shopping_cart_add_icon_177407.png" alt="Добавить в корзину"
-        width="30" height="30" @click="addToCart(product)">
+      <img src="https://cdn.icon-icons.com/icons2/2785/PNG/512/trolley_cart_add_icon_177406.png" alt="Добавить в корзину"
+        width="50" height="50" @click="addToCart(product)">
+
+     <img src="https://cdn.icon-icons.com/icons2/2785/PNG/512/trolley_cart_success_icon_177398.png" alt="Уже в корзине"
+        width="50" height="50" @click="">
+
+      <img src="https://cdn.icon-icons.com/icons2/2785/PNG/512/trolley_cart_cancel_icon_177409.png" alt="Удалить из корзины"
+        width="50" height="50" @click="deleteProduct(product)">
+
     </div>
   </div>
 </template>
 
 <script setup lang ="ts">
 import type { Product } from '@/stores/product';
-import { useCart } from "@/stores/cart";
+import { useCart} from "@/stores/cart";
 
 const props = defineProps<{
   products: Product[]
@@ -24,6 +31,9 @@ function addToCart(product: Product) {
 
 }
 
+function deleteProduct (product:Product) {
+ cartStore.deleteProduct(product);
+ }
 </script>
 
 <style lang="scss" scoped>
