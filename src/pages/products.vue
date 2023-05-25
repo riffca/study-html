@@ -1,20 +1,17 @@
 
 
 <template>
-<LayoutHeader/>
+<layout-header><CartStore/> </layout-header>
   <div class="products_page">
     <div class="products_page--logo">
-      <img src="https://static.tildacdn.info/tild6431-3661-4430-b735-353863373435/11.svg" imgfield="img"
+      <img src="https://static.tildacdn.info/tild6431-3661-4430-b735-353863373435/11.svg" 
         style="max-width: 150px; width: 150px" alt="" />
     </div>
     <div class="headline">
       Мы любим создавать особенные и уникальные вещи <br />для украшения вашей
       жизни и дома
     </div>
-    <CartIcon :itemQty="cartQty" />
-
     
-
     <products-list :products="productsWithIds" />
 
     <ProductItem :product="products" />
@@ -172,7 +169,7 @@ const productsWithIds: Product[] = products
 
   &--logo {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 60px;
   }
 }
 </style>

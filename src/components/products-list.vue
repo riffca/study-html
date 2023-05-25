@@ -4,14 +4,15 @@
     <img :src="product.img" imgfield="img" style="max-width: 150px; width: 150px" alt="" />
     <p>{{ product.name }}</p>
     <div class="product-item">
-      <img src="https://cdn.icon-icons.com/icons2/2785/PNG/512/trolley_cart_add_icon_177406.png" alt="Добавить в корзину"
+      <img v-if="!checkProduct(product)"
+        src="https://cdn.icon-icons.com/icons2/2785/PNG/512/trolley_cart_add_icon_177406.png" alt="Добавить в корзину"
         width="50" height="50" @click="addToCart(product)">
 
-     <img src="https://cdn.icon-icons.com/icons2/2785/PNG/512/trolley_cart_success_icon_177398.png" alt="Уже в корзине"
-        width="50" height="50" @click="">
+      <!-- <img src="https://cdn.icon-icons.com/icons2/2785/PNG/512/trolley_cart_success_icon_177398.png" alt="Уже в корзине"
+        width="50" height="50" @click="">  -->
 
-      <img src="https://cdn.icon-icons.com/icons2/2785/PNG/512/trolley_cart_cancel_icon_177409.png" alt="Удалить из корзины"
-        width="50" height="50" @click="deleteProduct(product)">
+      <img v-else src="https://cdn.icon-icons.com/icons2/2785/PNG/512/trolley_cart_cancel_icon_177409.png"
+        alt="Удалить из корзины" width="50" height="50" @click="deleteProduct(product)">
 
     </div>
   </div>
@@ -19,7 +20,16 @@
 
 <script setup lang ="ts">
 import type { Product } from '@/stores/product';
-import { useCart} from "@/stores/cart";
+import { useCart } from "@/stores/cart";
+import { computed } from 'vue';
+
+function checkProduct(product: Product) {
+  return Boolean(cartStore.cartProducts.find(item => item.id === product.id))
+}
+
+const isProductInCart = computed(() => {
+  return Boolean(cartStore.cartProducts.find(item => item.id === props.product.id))
+})
 
 const props = defineProps<{
   products: Product[]
@@ -31,9 +41,9 @@ function addToCart(product: Product) {
 
 }
 
-function deleteProduct (product:Product) {
- cartStore.deleteProduct(product);
- }
+function deleteProduct(product: Product) {
+  cartStore.deleteProduct(product);
+}
 </script>
 
 <style lang="scss" scoped>

@@ -1,0 +1,3 @@
+<template>
+    <CartPage/>
+    </template>

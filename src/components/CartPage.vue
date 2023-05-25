@@ -3,9 +3,23 @@
 <div class="cart">
 
 </div>
+<ul id="cart-products">
+  <!-- Здесь будут отображаться продукты в корзине -->
+</ul>
 <button>очистить корзину</button>
 <button>купить</button>
  </template>
+
+
+
+<script setup lang="ts">
+import type { Product } from '@/stores/product';
+import { useCart } from "@/stores/cart";
+import { computed } from 'vue';
+
+
+
+</script>
 
 <style lang="scss" scoped>
 button {
