@@ -45,6 +45,8 @@ const cartCount = computed(() => {
 
 .cart-header {
   display: flex;
-  position: absolute;
+  position:fixed;
   right: 15%;
+  height: 20px;
+
 }</style>

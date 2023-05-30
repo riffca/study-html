@@ -16,7 +16,19 @@
 import type { Product } from '@/stores/product';
 import { useCart } from "@/stores/cart";
 import { computed } from 'vue';
+import type {CartProduct}from "@/stores/cart";
 
+
+const cartStore = useCart();
+
+
+function addToCart(product: Product) {
+  cartStore.addProduct(product);
+}
+
+function deleteProduct(product: Product) {
+  cartStore.deleteProduct(product);
+}
 
 
 </script>

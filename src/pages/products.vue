@@ -166,6 +166,9 @@ const productsWithIds: Product[] = products
 .products_page {
   display: flex;
   flex-direction: column;
+  margin: 20px 0;
+  
+  
 
   &--logo {
     text-align: center;
