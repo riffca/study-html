@@ -19,7 +19,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts, vue, html, scss, css, json }": "prettier --write ."
+    "*.{js,ts,vue,html,scss,css,json}": "prettier --write ."
   },
   "dependencies": {
     "pinia": "^2.0.32",
