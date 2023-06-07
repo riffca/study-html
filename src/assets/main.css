@@ -33,7 +33,7 @@ a,
     padding: 0 2rem;
   }
 }
- button:hover {
+button:hover {
   background: #878f99;
   cursor: pointer;
- }
+}

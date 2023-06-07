@@ -16,7 +16,7 @@
     </div>
     <div class="app_shops">
       <button class="google_play">
-        <icons-IconGooglePlay/>
+        <icons-IconGooglePlay />
         Google play
       </button>
       <button class="ru_store">RuStore</button>
@@ -32,19 +32,18 @@ h1 {
   text-align: center;
 }
 
-.google_play, .ru_store, .app_store {
+.google_play,
+.ru_store,
+.app_store {
   height: 2rem;
   border: none;
   border-radius: 10px;
   width: 120px;
- 
- 
-
 }
 .app_shops {
   display: flex;
   align-items: center;
-  gap:20px;
+  gap: 20px;
 }
 
 svg {
@@ -59,5 +58,4 @@ svg {
   gap: 10px;
   margin-top: 10%;
 }
-
 </style>

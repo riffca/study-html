@@ -1,5 +1,5 @@
 <template>
-<svg width="24" height="24" viewBox="0 0 24 24">
+  <svg width="24" height="24" viewBox="0 0 24 24">
     <g width="1" fill="none" fill-rule="evenodd">
       <g id="qr_24__qr_24">
         <path id="qr_24__Bounds" d="M0 0h24v24H0z"></path>
@@ -11,4 +11,4 @@
       </g>
     </g>
   </svg>
-  </template>
+</template>

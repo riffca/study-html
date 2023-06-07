@@ -1,17 +1,18 @@
-
-
 <template>
-<layout-header><CartStore/> </layout-header>
+  <layout-header><CartStore /> </layout-header>
   <div class="products_page">
     <div class="products_page--logo">
-      <img src="https://static.tildacdn.info/tild6431-3661-4430-b735-353863373435/11.svg" 
-        style="max-width: 150px; width: 150px" alt="" />
+      <img
+        src="https://static.tildacdn.info/tild6431-3661-4430-b735-353863373435/11.svg"
+        style="max-width: 150px; width: 150px"
+        alt=""
+      />
     </div>
     <div class="headline">
       Мы любим создавать особенные и уникальные вещи <br />для украшения вашей
       жизни и дома
     </div>
-    
+
     <products-list :products="productsWithIds" />
 
     <ProductItem :product="products" />
@@ -40,22 +41,25 @@
 
       <icons-IconVk />
 
-      <a href="/" target="_blank" rel="nofollow" style="width: 48px; height: 48px">
+      <a
+        href="/"
+        target="_blank"
+        rel="nofollow"
+        style="width: 48px; height: 48px"
+      >
         <icons-IconTelegram />
       </a>
     </div>
   </div>
 </template>
 
-<script setup lang ="ts">
-
-import type { Product } from '@/stores/product';
+<script setup lang="ts">
+import type { Product } from "@/stores/product";
 const products = [
   {
     img: "https://img.freepik.com/free-psd/white-soft-pillow_176382-1113.jpg?w=740&t=st=1681475029~exp=1681475629~hmac=ebf93ad34ab40976c0b135555496335203a0600d85da46ca22c8ed03dc057590",
     price: 799,
     name: "Pillow",
-
   },
   {
     img: "https://img.freepik.com/premium-photo/ipad-case_744526-100.jpg?w=740",
@@ -99,11 +103,10 @@ const products = [
   },
 ];
 products.forEach((item, index) => {
-  item.id = index
-})
-const productsWithIds: Product[] = products
+  item.id = index;
+});
+const productsWithIds: Product[] = products;
 </script>
-
 
 <style lang="scss" scoped>
 .headline {
@@ -167,8 +170,6 @@ const productsWithIds: Product[] = products
   display: flex;
   flex-direction: column;
   margin: 20px 0;
-  
-  
 
   &--logo {
     text-align: center;

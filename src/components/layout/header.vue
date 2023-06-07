@@ -1,9 +1,9 @@
 <template>
-<div class="header">
-  <icons-IconLogo/>
-  <input type="text" placeholder="Поиск по сайту" />
-</div>
-<slot> </slot>
+  <div class="header">
+    <icons-IconLogo />
+    <input type="text" placeholder="Поиск по сайту" />
+  </div>
+  <slot> </slot>
 </template>
 
 <style lang="scss" scoped>
