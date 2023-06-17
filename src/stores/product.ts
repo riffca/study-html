@@ -3,7 +3,9 @@ export type Product = {
   price: number;
   name: string;
   id: number;
-  opacity:number;
+  deleted:boolean;
+  
+ 
 };
 
 export type Products = Product[];

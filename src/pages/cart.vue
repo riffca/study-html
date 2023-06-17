@@ -2,20 +2,20 @@
     <h2>Корзина</h2>
     <div class="cart">
         <ul>
-            <li class="cart_product" v-for="product in cartProducts" :key="product.id" :style="{ opacity: product.opacity }">
+            <li class="cart_product" v-for="product in cartProducts" :key="product.id" :style="{opacity: `product.deleted ? .5 : 1`}">
                 <input type="checkbox" v-model="cartProduct.selected" @change="cartStore.updateProduct(cartProduct)">
-                {{ product.img }}  {{ product.name }} - {{ product.price }}
-                <button @click="cartStore.deleteProduct(cartProduct)">Удалить товар</button>
+                {{ product.img }} {{ product.name }} - {{ product.price }}
+                <button id="deleteButton" @click="deleteProduct(product)">Удалить товар</button>
+                <button id="returnBack" style="display: none;"> Вернуть назад</button>
             </li>
         </ul>
     </div>
-    <button @click="cartStore.updateProduct(cartProduct)">купить</button>
- 
+    <button id="totalPrice">купить</button>
 </template>
   
 <script setup lang="ts">
 import type { Product } from "@/stores/product";
-import { useCart} from "@/stores/cart";
+import { useCart } from "@/stores/cart";
 import { computed } from "vue";
 import type { CartProduct } from "@/stores/cart";
 
@@ -24,15 +24,8 @@ const product: Product = {
     name: "Product Name",
     id: 1,
     price: 10,
-    opacity:1,
+    deleted: true,
 };
-
-function updateCart(product: CartProduct) {
-  cartStore.cartProducts = cartStore.cartProducts.filter(product => product.selected);
-  const totalPrice = cartStore.cartProducts.reduce((total, product) => total + product.price, 0);
-  return totalPrice;
-}
-
 const cartStore = useCart();
 const cartProducts = computed(() => cartStore.cartProducts);
 
@@ -43,13 +36,16 @@ const cartProduct: CartProduct = {
     price: product.price,
     deleted: false,
     selected: false,
-    opacity:1,
+    
 };
 
 cartProducts.value.push(cartProduct);
 
-function deleteProduct(product: CartProduct) {
-    product.opacity = 1;}
+const totalPrice: number = cartStore.cartProducts.filter(product => product.selected).reduce((total, product) => total + product.price, 0);
+
+function deleteProduct(product: CartProduct | Product) { cartStore.deleteProduct(product); }
+
+
 
 </script>
   
@@ -57,17 +53,16 @@ function deleteProduct(product: CartProduct) {
 button {
     padding: 6px 6px;
     border-radius: 5px;
-    margin-top: 50%;
+
 }
 
 li {
     list-style: none;
     margin: 0;
-    padding:0;
-
+    padding: 0;
 }
-.cart_product{
-    display:inline-block;
 
+.cart_product {
+    display: inline-block;
 }
 </style>

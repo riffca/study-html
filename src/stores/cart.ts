@@ -15,7 +15,6 @@ export const useCart = defineStore("cart", () => {
         ...product,
         deleted: false,
         selected: true,
-        opacity:0,
       };
       cartProducts.value.push(cartProduct);
     
@@ -23,7 +22,6 @@ export const useCart = defineStore("cart", () => {
   }
 
     function deleteProduct(product: CartProduct | Product) {
-      product.opacity = 1;
       const index = cartProducts.value.findIndex((item) => {
         return product.id == item.id;
       });
@@ -31,7 +29,16 @@ export const useCart = defineStore("cart", () => {
         cartProducts.value[index].deleted = true;
          return true; 
       }
-    }
+    } 
+
+ /*    function deleteProduct(product: CartProduct | Product) 
+{
+  if (product.deleted) {
+    product.opacity = 0.5;
+  } else {
+    product.opacity = 1;
+  }
+} */
 
 
 function removeProduct (product: Product) {
@@ -57,6 +64,6 @@ if (index !==-1) {
 export type CartProduct = Product & {
   deleted: boolean;
   selected: boolean;
-  opacity: number;
+
   
 };
