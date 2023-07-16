@@ -4,7 +4,6 @@ export type Product = {
   name: string;
   id: number;
   deleted:boolean;
-  
  
 };
 

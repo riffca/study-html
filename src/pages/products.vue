@@ -102,10 +102,15 @@ const products = [
     name: "Silver bust",
   },
 ];
+
+const productsString = JSON.stringify(products);
+localStorage.setItem('products', productsString);
+
 products.forEach((item, index) => {
   item.id = index;
 });
 const productsWithIds: Product[] = products;
+
 </script>
 
 <style lang="scss" scoped>
