@@ -6,6 +6,7 @@
       style="max-width: 150px; width: 150px"
       alt=""
     />
+
     <p>{{ product.name }}</p>
     <div class="product-item">
       <img
@@ -29,6 +30,8 @@
         @click="deleteProduct(product)"
       />
     </div>
+          <p>{{ product.name }}</p>
+
   </div>
 </template>
 
