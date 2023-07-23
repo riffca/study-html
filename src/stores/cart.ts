@@ -15,7 +15,6 @@ cartProducts.value = localStorage.getItem("cartProducts") ? JSON.parse (localSto
         ...product,
         deleted: false,
         selected: true,
-        returned:false,
       };
       cartProducts.value.push(cartProduct);
       localStorage.setItem('cartProducts', JSON.stringify(cartProducts.value));
@@ -50,22 +49,32 @@ if (index !==-1) {
   cartProducts.value[index].selected = true;
 }
 }
+let totalSum = 0;
+function updateSum(product:CartProduct) {
+  if (product.selected) {
+  totalSum += product.price;
+  } else {
+  totalSum -= product.price;
+  }
+  }
 
 function returnBack(product:CartProduct) {
   const index = cartProducts.value.findIndex((item) => {
     return product.id == item.id;
   });
   if (index !==-1) {
-    cartProducts.value[index].returned = true;
+    cartProducts.value[index].deleted = false;
+    const cartProductsFromLocalStorage = localStorage.getItem("cartProducts") ? JSON.parse(localStorage.getItem("cartProducts")) : [];
+    cartProductsFromLocalStorage.splice(index, 1);
+    localStorage.setItem('cartProducts', JSON.stringify(cartProductsFromLocalStorage));
   } 
 }
 
 
-  return { cartProducts, addProduct, deleteProduct,updateProduct, removeProduct,returnBack };
+  return { cartProducts, addProduct, deleteProduct,updateProduct, removeProduct,returnBack,updateSum };
 });
 
 export type CartProduct = Product & {
   deleted: boolean;
   selected: boolean;
-  returned:boolean;
 };

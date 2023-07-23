@@ -6,7 +6,7 @@
       style="max-width: 150px; width: 150px"
       alt=""
     />
-    <p>{{ product.name }}</p>
+    <p>{{ product.name }} - {{ product.price }}</p>
     <div class="product-item">
       <img
         v-if="!checkProduct(product)"
@@ -71,12 +71,14 @@ function deleteProduct(product: Product) {
 <style lang="scss" scoped>
 .product {
   display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  height: 100%;
-  justify-content: space-evenly;
-  text-align: center;
-  align-items: baseline;
-  padding: 40px calc((100% - (350px * 2)) / 2);
+flex-wrap: wrap;
+height: 100%;
+gap: 50px;
+text-align: center;
+align-items:center;
+justify-content: center;
+padding: 10px;
+margin: 10px 5px 10px 5px;
 }
+
 </style>

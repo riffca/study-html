@@ -1,17 +1,24 @@
 <template>
+  <layout-header> </layout-header>
   <h2>Корзина</h2>
   <div class="cart">
     <ul>
       <li class="cart_product" v-for="product in cartProducts" :key="product.id"
-      :style="{ opacity: product.deleted ? 0.5 : (product.returned ? 1 : 1) }"  >
+      :style="{ opacity: product.deleted ? 0.5 : 1}"  >
         <input type="checkbox" v-model="cartProduct.selected" @change="cartStore.updateProduct(cartProduct)">
-        {{ product.img }} {{ product.name }} - {{ product.price }}
+        <img
+      :src="product.img"
+      imgfield="img"
+      style="max-width: 100px; width: 100px"
+      alt=""
+    /> {{ product.name }} - {{ product.price }}
         <button id="deleteButton" @click="deleteProduct(product)">Удалить товар</button>
         <button v-if="product.deleted" @click="returnBack(product)">Вернуть назад</button>
       </li>
     </ul>
   </div>
-  <button id="totalPrice">купить</button>
+  <button>купить<div v-if="cartProduct.selected">{{ totalPrice }}</div></button> 
+  <layout-footer></layout-footer>
 </template>
   
 <script setup lang="ts">
@@ -37,13 +44,13 @@ const cartProduct: CartProduct = {
   price: product.price,
   deleted: false,
   selected: false,
-  returned:false,
 };
 
 cartProducts.value.push(cartProduct);
 function deleteProduct(product: CartProduct | Product) { cartStore.deleteProduct(product); }
 
 function returnBack(product: CartProduct) { cartStore.returnBack(product); }
+function updateSum (product:CartProduct) {cartStore.updateSum(product);}
 
 const totalPrice: number = cartStore.cartProducts.filter(product => product.selected).reduce((total, product) => total + product.price, 0);
 </script>
@@ -62,6 +69,16 @@ li {
 }
 
 .cart_product {
-  display: inline-block;
+  display: flex;
+align-items: flex-start;
+flex-wrap: wrap;
+height: 100%;
+
+gap: 50px;
+text-align: right;
+align-items:center;
+padding: 10px;
+margin: 10px 5px 10px 5px;
 }
+
 </style>
