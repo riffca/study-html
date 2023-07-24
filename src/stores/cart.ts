@@ -41,22 +41,13 @@ function removeProduct (product: Product) {
   }
 }
 
-function updateProduct(product:CartProduct) {
-const index = cartProducts.value.findIndex((item) => {
-  return product.id == item.id;
-});
-if (index !==-1) {
-  cartProducts.value[index].selected = true;
-}
-}
-let totalSum = 0;
-function updateSum(product:CartProduct) {
-  if (product.selected) {
-  totalSum += product.price;
-  } else {
-  totalSum -= product.price;
+function updateProductSelected(productIndex:number) {
+
+    const cartProductsFromLocalStorage = localStorage.getItem("cartProducts") ? JSON.parse(localStorage.getItem("cartProducts")) : [];
+  cartProductsFromLocalStorage[productIndex].selected = cartProducts.value[productIndex].selected;
+    localStorage.setItem('cartProducts', JSON.stringify(cartProductsFromLocalStorage));
   }
-  }
+
 
 function returnBack(product:CartProduct) {
   const index = cartProducts.value.findIndex((item) => {
@@ -71,7 +62,7 @@ function returnBack(product:CartProduct) {
 }
 
 
-  return { cartProducts, addProduct, deleteProduct,updateProduct, removeProduct,returnBack,updateSum };
+  return { cartProducts, addProduct, deleteProduct,updateProductSelected, removeProduct,returnBack};
 });
 
 export type CartProduct = Product & {

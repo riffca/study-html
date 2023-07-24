@@ -3,9 +3,10 @@
   <h2>Корзина</h2>
   <div class="cart">
     <ul>
-      <li class="cart_product" v-for="product in cartProducts" :key="product.id"
+      <li class="cart_product" v-for="product,index in cartProducts" :key="product.id"
       :style="{ opacity: product.deleted ? 0.5 : 1}"  >
-        <input type="checkbox" v-model="cartProduct.selected" @change="cartStore.updateProduct(cartProduct)">
+        <input type="checkbox" v-model="product.selected" @change="cartStore.updateProductSelected(index)">
+        {{ product.selected }}
         <img
       :src="product.img"
       imgfield="img"
@@ -17,7 +18,7 @@
       </li>
     </ul>
   </div>
-  <button>купить<div v-if="cartProduct.selected">{{ totalPrice }}</div></button> 
+  <button>купить<div >{{ totalPrice }}</div></button> 
   <layout-footer></layout-footer>
 </template>
   
@@ -37,22 +38,12 @@ const product: Product = {
 const cartStore = useCart();
 const cartProducts = computed(() => cartStore.cartProducts);
 
-const cartProduct: CartProduct = {
-  img: product.img,
-  name: product.name,
-  id: product.id,
-  price: product.price,
-  deleted: false,
-  selected: false,
-};
-
-cartProducts.value.push(cartProduct);
 function deleteProduct(product: CartProduct | Product) { cartStore.deleteProduct(product); }
 
 function returnBack(product: CartProduct) { cartStore.returnBack(product); }
-function updateSum (product:CartProduct) {cartStore.updateSum(product);}
 
-const totalPrice: number = cartStore.cartProducts.filter(product => product.selected).reduce((total, product) => total + product.price, 0);
+
+const totalPrice = computed (()=>cartStore.cartProducts.filter(product => product.selected).reduce((total, product) => total + product.price, 0));
 </script>
   
 <style lang="scss" scoped>

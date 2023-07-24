@@ -103,8 +103,7 @@ const products = [
   },
 ];
 
-const productsString = JSON.stringify(products);
-localStorage.setItem('products', productsString);
+
 
 products.forEach((item, index) => {
   item.id = index;
