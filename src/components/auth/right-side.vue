@@ -1,24 +1,28 @@
 <template>
   <div class="right_content">
-      <div class="right_content_body">
-        <div class="right_content_icon">
-         <icons-IconLogoGrey/>
-        </div>
-        <div class="vk_header">Вход ВКонтакте</div>
-        <input type="text" class="right_content_id" placeholder="Телефон или почта" />
-        <div class="entrance">
-          <input type="checkbox" />
-          Сохранить вход
-        </div>
-        <br />
-        <button class="enter_button">Войти</button>
-
-        <div class="right_content_or">или</div>
-        <button div class="right_content_qr">
-          <icons-IconQR/>
-          QR-код
-        </button>
+    <div class="right_content_body">
+      <div class="right_content_icon">
+        <icons-IconLogoGrey />
       </div>
+      <div class="vk_header">Вход ВКонтакте</div>
+      <input
+        type="text"
+        class="right_content_id"
+        placeholder="Телефон или почта"
+      />
+      <div class="entrance">
+        <input type="checkbox" />
+        Сохранить вход
+      </div>
+      <br />
+      <button class="enter_button">Войти</button>
+
+      <div class="right_content_or">или</div>
+      <button div class="right_content_qr">
+        <icons-IconQR />
+        QR-код
+      </button>
+    </div>
     <div class="registration">
       <button class="register_button">Зарегистрироваться</button>
       <div class="join_form">
@@ -31,7 +35,6 @@
 </template>
 
 <style lang="scss" scoped>
-
 .right_content_body,
 .registration {
   display: flex;
@@ -43,7 +46,6 @@
   margin-top: 1em;
   width: 300px;
   border-radius: 10px;
-  
 }
 .register_button,
 .enter_button,
@@ -110,13 +112,14 @@
   margin-top: 15px;
   color: white;
   &:hover {
-   background: #6cd97e;
+    background: #6cd97e;
   }
 }
 .enter_button {
   background: white;
   color: #141414;
-  &:hover {background: #d7d8db;
+  &:hover {
+    background: #d7d8db;
   }
 }
 .registration {

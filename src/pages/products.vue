@@ -1,23 +1,21 @@
-
-
 <template>
+  <layout-header><CartStore /> </layout-header>
   <div class="products_page">
     <div class="products_page--logo">
       <img
         src="https://static.tildacdn.info/tild6431-3661-4430-b735-353863373435/11.svg"
-        imgfield="img"
         style="max-width: 150px; width: 150px"
         alt=""
-   />
+      />
     </div>
     <div class="headline">
       Мы любим создавать особенные и уникальные вещи <br />для украшения вашей
       жизни и дома
     </div>
 
-    <products-list :products="products"/>
-    
-    
+    <products-list :products="productsWithIds" />
+
+    <ProductItem :product="products" />
 
     <div class="delivery">
       ИНФОРМАЦИЯ О ДОСТАВКЕ
@@ -39,24 +37,25 @@
     </div>
 
     <div class="media">
-      <icons-IconTwitter/>
+      <icons-IconTwitter />
 
-      <icons-IconVk/>
+      <icons-IconVk />
 
       <a
         href="/"
         target="_blank"
         rel="nofollow"
-        style="width: 48px; height: 48px">
-       <icons-IconTelegram/>
+        style="width: 48px; height: 48px"
+      >
+        <icons-IconTelegram />
       </a>
     </div>
   </div>
 </template>
 
-<script setup lang ="ts">
-import type { Product } from '@/stores/product';
-const products: Product[] =[
+<script setup lang="ts">
+import type { Product } from "@/stores/product";
+const products = [
   {
     img: "https://img.freepik.com/free-psd/white-soft-pillow_176382-1113.jpg?w=740&t=st=1681475029~exp=1681475629~hmac=ebf93ad34ab40976c0b135555496335203a0600d85da46ca22c8ed03dc057590",
     price: 799,
@@ -104,10 +103,16 @@ const products: Product[] =[
   },
 ];
 
+
+
+products.forEach((item, index) => {
+  item.id = index;
+});
+const productsWithIds: Product[] = products;
+
 </script>
 
 <style lang="scss" scoped>
-
 .headline {
   display: flex;
   flex-direction: column;
@@ -117,6 +122,7 @@ const products: Product[] =[
   font-size: 28px;
   opacity: 1;
 }
+
 .content {
   display: flex;
   align-items: flex-start;
@@ -127,12 +133,15 @@ const products: Product[] =[
   align-items: baseline;
   padding: 40px calc((100% - (350px * 2)) / 2);
 }
+
 .delivery {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   background-color: #f0f0f0;
   text-align: center;
+  color: black;
 }
+
 .delivery_info {
   margin-top: 50px;
   font-size: 28px;
@@ -140,31 +149,35 @@ const products: Product[] =[
   margin-left: auto;
   margin-right: auto;
 }
+
 .contacts_opportunities {
   padding-top: 100px;
   padding-bottom: 100px;
   text-align: center;
 }
+
 .contacts {
   font-size: 18px;
 }
+
 .contacts_info {
   width: 23em;
   margin: 30px auto 0 auto;
 }
+
 .media {
   margin-bottom: 40px;
   text-align: center;
 }
+
 .products_page {
   display: flex;
   flex-direction: column;
+  margin: 20px 0;
 
   &--logo {
     text-align: center;
-  margin-top: 30px;
+    margin-top: 60px;
   }
 }
-  
-
 </style>
