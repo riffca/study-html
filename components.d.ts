@@ -31,6 +31,7 @@ declare module '@vue/runtime-core' {
     ProductsList: typeof import('./src/components/products-list.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SearchByCategory: typeof import('./src/components/searchByCategory.vue')['default']
     TheWelcome: typeof import('./src/components/TheWelcome.vue')['default']
     WelcomeItem: typeof import('./src/components/WelcomeItem.vue')['default']
   }
