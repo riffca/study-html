@@ -1,32 +1,23 @@
 <template>
- <div>
-    <select v-model="selectedCategory">
-      <option value="">All</option>
-      <option value="category1">Category 1</option>
-      <option value="category2">Category 2</option>
+  <div>
+    <select
+      @change="emit('update:modelValue', selectedCategory)"
+      v-model="selectedCategory"
+    >
+      <option value="Category 1">Category 1</option>
+      <option value="Category 2">Category 2</option>
       <!-- другие категории сюда -->
     </select>
-
-    <ul>
-      <li v-for="product in filteredProducts" :key="product.id">
-        {{ product.name }}
-      </li>
-    </ul>
   </div>
 </template>
 
 <script setup lang="ts">
-import type {Category} from '@/stores/product';
+import { ref } from "vue";
 
-function searchByCategory(category: Category) {
-  const filteredProducts = Product.filter((product) => {
-    return product.category === category;
-  });
-}
-
-
+const selectedCategory = ref<string>("");
+const emit = defineEmits<{
+  (e: "update:modelValue", modelValue: string): void;
+}>();
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

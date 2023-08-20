@@ -12,8 +12,9 @@
       Мы любим создавать особенные и уникальные вещи <br />для украшения вашей
       жизни и дома
     </div>
-<SearchByCategory> </SearchByCategory>
-    <products-list :products="productsWithIds" />
+    <SearchByCategory v-model="categoryInternal" /> {{ categoryInternal }}
+
+    <products-list :products="filteredProducts" />
 
     <ProductItem :product="products" />
 
@@ -56,14 +57,22 @@
 <script setup lang="ts">
 import SearchByCategory from "@/components/searchByCategory.vue";
 import type { Product } from "@/stores/product";
-import {products} from "@/stores/product";
-
+import { products } from "@/stores/product";
+import { ref, computed } from "vue";
 
 products.forEach((item, index) => {
   item.id = index;
 });
 const productsWithIds: Product[] = products;
 
+const categoryInternal = ref<string>("");
+const filteredProducts = computed(() =>
+  categoryInternal.value
+    ? productsWithIds.filter((product) =>
+        product.categories.includes(categoryInternal.value)
+      )
+    : productsWithIds
+);
 </script>
 
 <style lang="scss" scoped>
