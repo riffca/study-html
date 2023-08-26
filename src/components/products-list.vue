@@ -30,8 +30,7 @@
         @click="deleteProduct(product)"
       />
     </div>
-          <p>{{ product.name }}</p>
-
+          
   </div>
 </template>
 
@@ -65,9 +64,6 @@ function deleteProduct(product: Product) {
   cartStore.removeProduct(product);
   localStorage.setItem('cartStore', JSON.stringify(cartStore.removeProduct(product)));
 }
-
-
-
 
 </script>
 
